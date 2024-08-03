@@ -1,0 +1,4 @@
+[default-routes]
+alsa_card.pci-0000_00_1f.3:output:analog-output-headphones={"channelVolumes":[0.215974, 0.215974], "latencyOffsetNsec":0, "channelMap":["FL", "FR"], "mute":false}
+alsa_card.pci-0000_00_1f.3:output:analog-output-speaker={"mute":true, "channelMap":["FL", "FR"], "channelVolumes":[0.000000, 0.000000], "latencyOffsetNsec":0}
+alsa_card.pci-0000_00_1f.3:profile:output:analog-stereo+input:analog-stereo=["analog-output-headphones"]
