@@ -1,8 +1,0 @@
-[stream-properties]
-Audio/Sink:application.id:com.github.wwmm.easyeffects={"mute":false, "volume":1.000000, "channelVolumes":[1.000000, 1.000000], "channelMap":["FL", "FR"]}
-Audio/Sink:node.name:auto_null={"channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "volume":1.000000, "mute":false}
-Audio/Source/Virtual:application.id:com.github.wwmm.easyeffects={"mute":false, "volume":1.000000, "channelVolumes":[1.000000, 1.000000], "channelMap":["FL", "FR"]}
-Input/Audio:media.role:Music={"channelVolumes":[1.000000, 1.000000], "mute":false, "channelMap":["FL", "FR"], "volume":1.000000}
-Output/Audio:application.name:Firefox={"volume":1.000000, "mute":false, "channelVolumes":[1.000000, 1.000000], "channelMap":["FL", "FR"]}
-Output/Audio:media.role:Music={"mute":false, "channelVolumes":[1.000000, 1.000000], "channelMap":["FL", "FR"], "volume":1.000000, "target":"easyeffects_sink"}
-Output/Audio:media.role:Notification={"channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "volume":1.000000, "mute":false}
