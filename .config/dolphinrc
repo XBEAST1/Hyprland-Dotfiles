@@ -4,12 +4,11 @@ MenuBar=Disabled
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [General]
-LockPanels=false
 ShowFullPath=true
 ShowSelectionToggle=false
 ShowStatusBar=false
 Version=202
-ViewPropsTimestamp=2023,4,26,16,58,48.324
+ViewPropsTimestamp=2025,1,6,13,35,26.842
 
 [IconsMode]
 MaximumTextLines=0
