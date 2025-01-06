@@ -5,7 +5,7 @@
 git clone https://github.com/XBEAST1/Hyprland-Dotfiles.git
 cd Hyprland-Dotfiles
 rm -rf .config/fastfetch .config/kitty .config/hyde/themes/Catppuccin\ Mocha/
-rsync -av --exclude=".git" ./ ~/
+cp -r .config .local .themes ~/
 ```
 <br>
 
