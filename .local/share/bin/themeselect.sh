@@ -45,13 +45,19 @@ rofiSel=$(for i in ${!thmList[@]} ; do
     echo -en "${thmList[i]}\x00icon\x1f${thmbDir}/$(set_hash "${thmWall[i]}").${thmbExtn}\n"
 done | rofi -dmenu -theme-str "${r_scale}" -theme-str "${r_override}" -config "${rofiConf}" -select "${hydeTheme}")
 
-#// determine logo path based on selected theme
+#// change logo path based on selected theme
 
 case "${rofiSel}" in
-    *"Catppuccin Mocha"*) 
-        fastfetchLogo="${HOME}/.config/fastfetch/png/Image.png" ;;
+    *"Castle Dimitrescu"*) 
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Purple.png" ;;
     *"Gruvbox"*) 
-        fastfetchLogo="${HOME}/.config/fastfetch/png/Image2.png" ;;
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Yellow.png" ;;
+    *"Misty"*) 
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Blue2.png" ;;
+    *"Electra"*) 
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Grey.png" ;;
+    *"Asylums"*) 
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Black.png" ;;
     *) 
         fastfetchLogo="" ;;
 esac
@@ -62,8 +68,8 @@ if [ ! -z "${rofiSel}" ] ; then
     "${scrDir}/themeswitch.sh" -s "${rofiSel}"
     notify-send -a "t1" -i "$fastfetchLogo" " ${rofiSel}"
 
+    # Update Fastfetch config
     if [ -n "${fastfetchLogo}" ]; then
-        # Update Fastfetch config
         jq --arg logo "$fastfetchLogo" '.logo.source = $logo' "$fastfetchConf" > "${fastfetchConf}.tmp" && mv "${fastfetchConf}.tmp" "$fastfetchConf"
     fi
 fi
