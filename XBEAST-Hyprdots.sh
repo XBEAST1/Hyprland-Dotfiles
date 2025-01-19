@@ -4,8 +4,7 @@
 sudo pacman -S rofi-emoji noto-fonts-emoji imagemagick tumbler ffmpegthumbnailer thunar thunar-archive-plugin xfce4-session --noconfirm
 
 # Configure Thunar
-sudo mkdir /usr/share/thumbnailers/
-cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
+sudo cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
 
 # Remove old configurations
 rm -rf ~/.config/fastfetch ~/.config/kitty /usr/share/sddm/themes/Candy/theme.conf
