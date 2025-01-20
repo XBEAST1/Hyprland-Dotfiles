@@ -3,10 +3,8 @@
 # Install required packages
 sudo pacman -S rofi-emoji noto-fonts-emoji btop imagemagick tumbler ffmpegthumbnailer thunar thunar-archive-plugin xfce4-session --noconfirm
 
-# Fix thunar thumbnails issue
-pkill -9 tumblerd
-/usr/lib/tumbler-1/tumblerd
-sudo bash -c 'echo -e "[Thumbnailer Entry]\nTryExec=ffmpeg\nExec=ffmpeg -y -i %i %o -fs %s\nMimeType=audio/mpeg" > /usr/share/thumbnailers/audiocovers.thumbnailer'
+# Configure Thunar
+sudo cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
 
 # Remove old configurations
 sudo rm -rf ~/.config/fastfetch ~/.config/kitty /etc/sddm.conf.d/kde_settings.conf
