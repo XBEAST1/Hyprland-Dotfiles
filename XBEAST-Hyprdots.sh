@@ -10,7 +10,7 @@ sudo cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
 sudo rm -rf ~/.config/fastfetch ~/.config/kitty /etc/sddm.conf.d/kde_settings.conf
 
 # Copy new configurations
-sudo cp -r .config .local .themes ~/
+cp -r .config .local .themes ~/
 sudo cp -r .sddm/themes /usr/share/sddm
 sudo cp -f .sddm/themes/Electra/kde_settings.conf /etc/sddm.conf.d/
 
