@@ -21,3 +21,9 @@ Note: You Need <a href="https://github.com/prasanthrangan/hyprdots">HyDE</a> For
 <img width="32.5%" src="https://github.com/user-attachments/assets/6a56020a-bf90-4950-bfff-e527dea774ad">
 <img width="32.5%" src="https://github.com/user-attachments/assets/9dff6440-a35d-4efa-9aed-2ffb0a44ec6a">
 <img width="32.5%" src="https://github.com/user-attachments/assets/09d82415-00cf-4b52-b007-434fc15fc656">
+<img width="32.5%" src="https://github.com/user-attachments/assets/c50c0908-f41c-4881-9485-d94a51ae3cce">
+<img width="32.5%" src="https://github.com/user-attachments/assets/c6ecca67-95cf-47c9-9f27-f8668f9062a2">
+<img width="32.5%" src="https://github.com/user-attachments/assets/277fba8f-cc17-4618-ac08-1d1417b13fc8">
+<img width="32.5%" src="https://github.com/user-attachments/assets/fe2a678b-81fc-4a2f-8030-62d415dff80f">
+<img width="32.5%" src="https://github.com/user-attachments/assets/aa643836-12c8-4766-a58c-48864406b696">
+<img width="32.5%" src="https://github.com/user-attachments/assets/7c0566ae-219d-40c9-845c-308e55287de0">
