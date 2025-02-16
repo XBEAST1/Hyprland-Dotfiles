@@ -34,7 +34,7 @@ wallpaper_names=()
 thumbnails=()
 
 for i in "${!wallList[@]}"; do
-    cleaned_name=$(basename "${wallList[$i]}" | sed 's/\(-Black\|-Black2\|-Blue\|-Purple\|-Grey\|-Yellow\|-Blue2\|-Silver\)\(\.jpg\|\.png\)$//' | sed 's/\(\.jpg\|\.png\|\.jpeg\|\.bmp\|\.webp\)$//')
+    cleaned_name=$(basename "${wallList[$i]}" | sed 's/\(-Black\|-Black2\|-Blue\|-Purple\|-Grey\|-Yellow\|-Blue2\|-Silver\|-Red\)\(\.jpg\|\.png\)$//' | sed 's/\(\.jpg\|\.png\|\.jpeg\|\.bmp\|\.webp\)$//')
     wallpapers+=("${wallList[$i]}")
     wallpaper_names+=("${cleaned_name}")
     thumbnails+=("${thmbDir}/$(set_hash "${wallList[$i]}").sqre")
@@ -92,6 +92,8 @@ case "${wallNameWithExt}" in
         fastfetchLogo="${HOME}/.config/fastfetch/png/Yellow.png" ;;
     *Silver*)
         fastfetchLogo="${HOME}/.config/fastfetch/png/Silver.png" ;;
+    *Red*)
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Red.png" ;;
     *)
         fastfetchLogo="" ;;
 esac

@@ -58,6 +58,10 @@ case "${rofiSel}" in
         fastfetchLogo="${HOME}/.config/fastfetch/png/Grey.png" ;;
     *"Asylums"*) 
         fastfetchLogo="${HOME}/.config/fastfetch/png/Black.png" ;;
+    *"Obscura"*) 
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Black.png" ;;
+    *"Cyber"*)
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Purple.png" ;;
     *) 
         fastfetchLogo="" ;;
 esac
