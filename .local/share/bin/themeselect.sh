@@ -59,7 +59,7 @@ case "${rofiSel}" in
     *"Asylums"*) 
         fastfetchLogo="${HOME}/.config/fastfetch/png/Black.png" ;;
     *"Obscura"*) 
-        fastfetchLogo="${HOME}/.config/fastfetch/png/Black.png" ;;
+        fastfetchLogo="${HOME}/.config/fastfetch/png/Black2.png" ;;
     *"Cyber"*)
         fastfetchLogo="${HOME}/.config/fastfetch/png/Purple.png" ;;
     *) 
