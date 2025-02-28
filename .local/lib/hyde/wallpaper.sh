@@ -5,6 +5,7 @@ scrDir="$(dirname "$(realpath "$0")")"
 # shellcheck disable=SC1091
 source "${scrDir}/globalcontrol.sh"
 fastfetchConf="${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/config.jsonc"
+hyprlockConf="${HOME}/.local/share/hyde/hyprlock.conf"
 
 # // Help message
 show_help() {
@@ -194,6 +195,12 @@ Wall_Select() {
     # Update Fastfetch config
     if [ -n "${fastfetchLogo}" ]; then
         jq --arg logo "$fastfetchLogo" '.logo.source = $logo' "$fastfetchConf" > "${fastfetchConf}.tmp" && mv "${fastfetchConf}.tmp" "$fastfetchConf"
+    fi
+
+    # Update MPRIS_IMAGE in hyprlock with fastfetch logo
+    if [ -n "${fastfetchLogo}" ]; then
+        tmpFile=$(mktemp)
+        sed "s|^\(\$MPRIS_IMAGE\s*=\s*\).*|\1${fastfetchLogo}|" "$hyprlockConf" > "$tmpFile" && mv "$tmpFile" "$hyprlockConf"
     fi
 }
 

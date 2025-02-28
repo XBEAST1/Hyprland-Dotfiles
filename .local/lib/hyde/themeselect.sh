@@ -15,6 +15,7 @@ rofiAssetDir="${SHARE_DIR}/hyde/rofi/assets"
 hypr_border=${hypr_border:-"$(hyprctl -j getoption decoration:rounding | jq '.int')"}
 
 fastfetchConf="${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/config.jsonc"
+hyprlockConf="${HOME}/.local/share/hyde/hyprlock.conf"
 
 #// scale for monitor
 mon_data=$(hyprctl -j monitors)
@@ -197,4 +198,11 @@ if [ -n "${rofiSel}" ]; then
         tmpFile=$(mktemp)
         jq --arg logo "$fastfetchLogo" '.logo.source = $logo' "$fastfetchConf" > "$tmpFile" && mv "$tmpFile" "$fastfetchConf"
     fi
+
+    # Update MPRIS_IMAGE in hyprlock with fastfetch logo
+    if [ -n "${fastfetchLogo}" ]; then
+        tmpFile=$(mktemp)
+        sed "s|^\(\$MPRIS_IMAGE\s*=\s*\).*|\1${fastfetchLogo}|" "$hyprlockConf" > "$tmpFile" && mv "$tmpFile" "$hyprlockConf"
+    fi
+
 fi
