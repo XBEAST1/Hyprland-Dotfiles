@@ -3,6 +3,10 @@ exec = gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-black'
 exec = gsettings set org.gnome.desktop.interface gtk-theme 'Wallbash-Gtk'
 exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
+exec = gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+exec = gsettings set org.gnome.desktop.interface cursor-size 20
+exec = hyprctl setcursor Adwaita 10
+
 general {
     gaps_in = 3
     gaps_out = 8
