@@ -196,7 +196,7 @@ if [ -t 1 ];then
 
     alias c='clear' \
         un='$aurhelper -Rns' \
-        up='$aurhelper -Syu' \
+        up='$aurhelper -Syu --noconfirm' \
         pi='$aurhelper -S --noconfirm' \
         pl='$aurhelper -Qs' \
         pa='$aurhelper -Ss' \

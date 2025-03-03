@@ -7,7 +7,11 @@ cd Hyprland-Dotfiles
 chmod +x XBEAST-Hyprdots.sh
 ./XBEAST-Hyprdots.sh
 ```
-Note: You Need <a href="https://github.com/HyDE-Project/HyDE">HyDE</a> For These Dotfiles To Work.
+You Need <a href="https://github.com/HyDE-Project/HyDE">HyDE</a> For These Dotfiles To Work.
+<br>
+If You're Using Old Version of HyDE Use These <a href="https://github.com/XBEAST1/Hyprland-Dotfiles/tree/hyprdots">Hyprland Dotfiles</a>
+<br>
+<br>
 
 <img width="32.5%" src="https://github.com/user-attachments/assets/2878492c-ac50-48be-98fc-d4d17cd7f119">
 <img width="32.5%" src="https://github.com/user-attachments/assets/141243a5-1103-42d0-a668-7366f293bdfe">
