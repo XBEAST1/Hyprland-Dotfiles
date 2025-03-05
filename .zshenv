@@ -195,12 +195,12 @@ if [ -t 1 ];then
     fi
 
     alias c='clear' \
-        un='$aurhelper -Rns' \
+        un='$aurhelper -Rns --noconfirm' \
         up='$aurhelper -Syu --noconfirm' \
         pi='$aurhelper -S --noconfirm' \
         pl='$aurhelper -Qs' \
         pa='$aurhelper -Ss' \
-        pc='$aurhelper -Sc' \
+        pc='$aurhelper -Sc --noconfirm' \
         pinfo='$aurhelper -Qi' \
         pu='$aurhelper -Qtdq | $aurhelper -Rns - --noconfirm' \
         vc='code .' \
