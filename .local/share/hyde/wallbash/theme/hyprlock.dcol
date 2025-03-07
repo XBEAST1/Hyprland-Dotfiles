@@ -44,6 +44,17 @@ label {
   valign = top
 }
 
+# ARCH LOGO
+label {
+  monitor =
+  text = 
+  color = $wallbash_4xa9_rgba
+  font_size = 200
+  position = 30, 50
+  halign = left
+  valign = top
+}
+
 # USER AVATAR
 image {
     monitor =
