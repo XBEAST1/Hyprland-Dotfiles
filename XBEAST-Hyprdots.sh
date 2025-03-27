@@ -19,7 +19,7 @@ sudo cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
 sudo rm -rf ~/.config/fastfetch ~/.config/kitty /etc/sddm.conf.d/kde_settings.conf ~/.config/waybar/config.ctl ~/.hyde.zshrc ~/.zshenv /etc/sddm.conf.d/the_hyde_project.conf
 
 # Copy New Configurations
-cp -r .config .local .themes .icons .hyde.zshrc .zshenv ~/
+cp -r .config .local .hyde.zshrc .zshenv ~/
 sudo cp -r .sddm/themes /usr/share/sddm
 sudo cp -f .sddm/themes/Electra/kde_settings.conf /etc/sddm.conf.d/the_hyde_project.conf
 
