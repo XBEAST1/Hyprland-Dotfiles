@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Required Packages
-sudo pacman -S rofi-emoji noto-fonts-emoji btop imagemagick tumbler ffmpegthumbnailer thunar thunar-archive-plugin xfce4-session preload --noconfirm
+sudo pacman -S rofi-emoji noto-fonts-emoji btop imagemagick tumbler ffmpegthumbnailer thunar thunar-archive-plugin xfce4-session preload --noconfirm --needed
 
 # Change Shell to zsh
 chsh -s /bin/zsh
