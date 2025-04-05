@@ -184,6 +184,10 @@ if [ -t 1 ];then
     export XDG_CONFIG_HOME XDG_CONFIG_DIR XDG_DATA_HOME XDG_STATE_HOME XDG_CACHE_HOME XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR \
     XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR
 
+    eval "$(fzf --zsh)"
+    eval $(thefuck --alias fk)
+    eval "$(zoxide init zsh)"
+
 
     # Helpful aliases
     if [[ -x "$(which eza)" ]]; then
@@ -195,12 +199,15 @@ if [ -t 1 ];then
     fi
 
     alias c='clear' \
+        s='sudo su' \
+        cd='z' \
         un='$aurhelper -Rns --noconfirm' \
         up='$aurhelper -Syu --noconfirm' \
         pi='$aurhelper -S --noconfirm' \
         pl='$aurhelper -Qs' \
         pa='$aurhelper -Ss' \
         pc='$aurhelper -Sc --noconfirm' \
+        pcc='$aurhelper -Scc --noconfirm' \
         pinfo='$aurhelper -Qi' \
         pu='$aurhelper -Qtdq | $aurhelper -Rns - --noconfirm' \
         vc='code .' \
