@@ -21,6 +21,7 @@ options:
     -g, --get                 Get current wallpaper of specified backend
     -o, --output <file>       Copy current wallpaper to specified file
         --link                Resolved the linked wallpaper according to the theme
+    -t  --filetypes <types>   Specify file types to override (colon-separated ':')
     -h, --help                Display this help message
 
 flags:
@@ -50,7 +51,7 @@ Wall_Cache() {
     if [ "${set_as_global}" == "true" ]; then
         print_log -sec "wallpaper" "Setting Wallpaper as global"
         "${scrDir}/swwwallcache.sh" -w "${wallList[setIndex]}" &>/dev/null
-        "${scrDir}/swwwallbash.sh" "${wallList[setIndex]}" &
+        "${scrDir}/color.set.sh" "${wallList[setIndex]}" &
         ln -fs "${thmbDir}/${wallHash[setIndex]}.sqre" "${wallSqr}"
         ln -fs "${thmbDir}/${wallHash[setIndex]}.thmb" "${wallTmb}"
         ln -fs "${thmbDir}/${wallHash[setIndex]}.blur" "${wallBlr}"
@@ -128,12 +129,14 @@ Wall_Select() {
     elem_border=$((hypr_border * 3))
 
     #// scale for monitor
+
     mon_data=$(hyprctl -j monitors)
     mon_x_res=$(jq '.[] | select(.focused==true) | if (.transform % 2 == 0) then .width else .height end' <<<"${mon_data}")
     mon_scale=$(jq '.[] | select(.focused==true) | .scale' <<<"${mon_data}" | sed "s/\.//")
     mon_x_res=$((mon_x_res * 100 / mon_scale))
 
     #// generate config
+
     elm_width=$(((28 + 8 + 5) * font_scale))
     max_avail=$((mon_x_res - (4 * font_scale)))
     col_count=$((max_avail / elm_width))
@@ -148,6 +151,7 @@ Wall_Select() {
     #// launch rofi menu
     local entry
     entry=$(
+
         Wall_Json | jq -r '.[].rofi_sqre' | rofi -dmenu \
             -display-column-separator ":::" \
             -display-columns 1 \
@@ -165,7 +169,7 @@ Wall_Select() {
         exit 0
     fi
 
-    # Determine fastfetch logo based on the wallpaper filename
+        # Determine fastfetch logo based on the wallpaper filename
     case "${selected_wallpaper_path}" in
         *Black2*)
             fastfetchLogo="${HOME}/.config/fastfetch/png/Black2.png" ;;
@@ -329,14 +333,17 @@ if [ -z "${*}" ]; then
 fi
 
 # Define long options
-LONGOPTS="link,global,select,json,next,previous,random,set:,backend:,get,output:,help"
+LONGOPTS="link,global,select,json,next,previous,random,set:,backend:,get,output:,help,filetypes:"
 
 # Parse options
 PARSED=$(
-    if getopt --options GSjnprb:s:go:h --longoptions $LONGOPTS --name "$0" -- "$@"; then
+    if getopt --options GSjnprb:s:t:go:h --longoptions $LONGOPTS --name "$0" -- "$@"; then
         exit 2
     fi
 )
+
+# Initialize the array for filetypes
+WALLPAPER_OVERRIDE_FILETYPES=()
 
 wallpaper_backend="${WALLPAPER_BACKEND:-swww}"
 wallpaper_setter_flag=""
@@ -357,7 +364,7 @@ while true; do
         exit 0
         ;;
     -S | --select)
-        "${scrDir}/swwwallcache.sh" w &
+        "${scrDir}/swwwallcache.sh" w &>/dev/null &
         wallpaper_setter_flag=select
         shift
         ;;
@@ -391,6 +398,16 @@ while true; do
         # Accepts wallpaper output path
         wallpaper_setter_flag=o
         wallpaper_output="${2}"
+        shift 2
+        ;;
+    -t | --filetypes)
+        IFS=':' read -r -a WALLPAPER_OVERRIDE_FILETYPES <<<"$2"
+        if [ "${LOG_LEVEL}" == "debug" ]; then
+            for i in "${WALLPAPER_OVERRIDE_FILETYPES[@]}"; do
+                print_log -g "DEBUG:" -b "filetype overrides : " "'${i}'"
+            done
+        fi
+        export WALLPAPER_OVERRIDE_FILETYPES
         shift 2
         ;;
     -h | --help)
