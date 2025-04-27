@@ -1,11 +1,10 @@
 $HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
-exec = gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-black'
-exec = gsettings set org.gnome.desktop.interface gtk-theme 'Wallbash-Gtk'
-exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
-exec = gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
-exec = gsettings set org.gnome.desktop.interface cursor-size 20
-exec = hyprctl setcursor Adwaita 10
+$GTK_THEME = Wallbash-Gtk
+$ICON_THEME = Tela-circle-black
+$CURSOR_THEME = Nero-Cyber-Cyan
+$CURSOR_SIZE = 30
+$COLOR_SCHEME = prefer-dark
 
 general {
     gaps_in = 3
