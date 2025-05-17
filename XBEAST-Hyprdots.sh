@@ -45,8 +45,8 @@ sudo cp -r .sddm/themes /usr/share/sddm
 sudo cp -f .sddm/themes/Electra/kde_settings.conf /etc/sddm.conf.d/the_hyde_project.conf
 
 # Prioritize Chaotic AUR
-cp /etc/pacman.conf /etc/pacman.conf.bak
-sed -i '/\[chaotic-aur\]/,/^$/d' /etc/pacman.conf
-sed -i '/\[core\]/i [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist\n' /etc/pacman.conf
+sudo cp /etc/pacman.conf /etc/pacman.conf.bak
+sudo sed -i '/\[chaotic-aur\]/,/^$/d' /etc/pacman.conf
+sudo sed -i '/\[core\]/i [chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist\n' /etc/pacman.conf
 
 echo "XBEAST Hyprdots Setup Complete!"
