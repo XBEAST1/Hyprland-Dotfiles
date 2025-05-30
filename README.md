@@ -2,9 +2,9 @@
 <br>
   
 ```
-git clone https://github.com/XBEAST1/Hyprland-Dotfiles.git
+git clone --depth 1 https://github.com/XBEAST1/Hyprland-Dotfiles.git
 cd Hyprland-Dotfiles
-chmod +x XBEAST-Hyprdots.sh
+sudo chmod +x XBEAST-Hyprdots.sh
 ./XBEAST-Hyprdots.sh
 ```
 You Need <a href="https://github.com/HyDE-Project/HyDE">HyDE</a> For These Dotfiles To Work.
