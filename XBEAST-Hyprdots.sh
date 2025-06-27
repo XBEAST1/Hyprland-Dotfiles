@@ -31,16 +31,20 @@ echo "vm.vfs_cache_pressure=50" | sudo tee -a /etc/sysctl.conf
 sudo cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
 
 # Remove Old Configurations
-sudo rm -rf ~/.config/fastfetch ~/.config/kitty /etc/sddm.conf.d/kde_settings.conf ~/.config/waybar/config.ctl ~/.hyde.zshrc ~/.zshenv /etc/sddm.conf.d/the_hyde_project.conf
+rm -rf "$HOME/.config/fastfetch" "$HOME/.config/kitty" "$HOME/.config/waybar/config.ctl" "$HOME/.hyde.zshrc" "$HOME/.zshenv"
+sudo rm -f /etc/sddm.conf.d/kde_settings.conf /etc/sddm.conf.d/the_hyde_project.conf
 
 # Extract Cursors And Icons
-mkdir -p ~/.icons
+mkdir -p "$HOME/.icons"
 for tar in .icons/*.tar.gz; do
-    tar -xzf "$tar" -C ~/.icons/
+    tar -xzf "$tar" -C "$HOME/.icons/"
 done
 
+# Add close button on apps
+gsettings reset org.gnome.desktop.wm.preferences button-layout
+
 # Copy New Configurations
-cp -r .config .local .hyde.zshrc .zshenv ~/
+cp -r .config .local .hyde.zshrc .zshenv "$HOME/"
 sudo cp -r .sddm/themes /usr/share/sddm
 sudo cp -f .sddm/themes/Electra/kde_settings.conf /etc/sddm.conf.d/the_hyde_project.conf
 

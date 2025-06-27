@@ -25,21 +25,28 @@ fi
 if [ "$1" == "toggle" ]; then
     case "$CURRENT_PROFILE" in
         "powersave")
-            NEW_PROFILE="balanced"
-            sudo tee "$NO_TURBO_PATH" <<< 0
-            sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor <<< "powersave"
+            echo 0 | sudo tee "$NO_TURBO_PATH" > /dev/null
+            for cpu in /sys/devices/system/cpu/cpu[0-9]*; do
+                echo "powersave" | sudo tee "$cpu/cpufreq/scaling_governor" > /dev/null
+            done
             ;;
         "balanced")
-            NEW_PROFILE="performance"
-            sudo tee "$NO_TURBO_PATH" <<< 0
-            sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor <<< "performance"
+            echo 0 | sudo tee "$NO_TURBO_PATH" > /dev/null
+            for cpu in /sys/devices/system/cpu/cpu[0-9]*; do
+                echo "performance" | sudo tee "$cpu/cpufreq/scaling_governor" > /dev/null
+            done
             ;;
         "performance")
-            NEW_PROFILE="powersave"
-            sudo tee "$NO_TURBO_PATH" <<< 1
-            sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor <<< "powersave"
+            echo 1 | sudo tee "$NO_TURBO_PATH" > /dev/null
+            for cpu in /sys/devices/system/cpu/cpu[0-9]*; do
+                echo "powersave" | sudo tee "$cpu/cpufreq/scaling_governor" > /dev/null
+            done
             ;;
     esac
+
+    # Refresh Waybar
+    kill -s SIGRTMIN+8 "$(pidof waybar)"
+    exit 0
 fi
 
 # Output JSON for Waybar
