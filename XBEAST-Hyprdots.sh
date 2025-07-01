@@ -40,9 +40,6 @@ for tar in .icons/*.tar.gz; do
     tar -xzf "$tar" -C "$HOME/.icons/"
 done
 
-# Add close button on apps
-gsettings reset org.gnome.desktop.wm.preferences button-layout
-
 # Copy New Configurations
 cp -r .config .local .hyde.zshrc .zshenv "$HOME/"
 sudo cp -r .sddm/themes /usr/share/sddm
