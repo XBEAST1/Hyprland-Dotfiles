@@ -202,6 +202,7 @@ if [ -t 1 ];then
         s='sudo su' \
         cd='z' \
         un='$aurhelper -Rns --noconfirm' \
+        unn='$aurhelper -Rdd --noconfirm' \
         up='$aurhelper -Syu --noconfirm' \
         pi='$aurhelper -S --noconfirm' \
         pl='$aurhelper -Qs' \
@@ -210,6 +211,7 @@ if [ -t 1 ];then
         pcc='$aurhelper -Scc --noconfirm' \
         pinfo='$aurhelper -Qi' \
         pu='$aurhelper -Qtdq | $aurhelper -Rns - --noconfirm' \
+        ca='setsid cursor . >/dev/null 2>&1 < /dev/null &' \
         vc='code .' \
         ..='cd ..' \
         ...='cd ../..' \
