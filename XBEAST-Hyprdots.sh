@@ -24,6 +24,8 @@ chsh -s /bin/zsh
 # Change Some Settings For Better Performance
 sudo systemctl enable preload
 sudo systemctl start preload
+sudo sed -i '/vm\.swappiness/d' /etc/sysctl.conf
+sudo sed -i '/vm\.vfs_cache_pressure/d' /etc/sysctl.conf
 echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.conf
 echo "vm.vfs_cache_pressure=50" | sudo tee -a /etc/sysctl.conf
 
