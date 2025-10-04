@@ -1,0 +1,187 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "quickInput.previousSeparator",
+    "when": "inQuickInput && quickInputType == 'quickPick'"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "-quickInput.previousSeparator",
+    "when": "inQuickInput && quickInputType == 'quickPick'"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "quickInput.nextSeparator",
+    "when": "inQuickInput && quickInputType == 'quickPick'"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "-quickInput.nextSeparator",
+    "when": "inQuickInput && quickInputType == 'quickPick'"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+enter",
+    "command": "chatEditor.action.accept",
+    "when": "chat.hasEditorModifications && editorFocus && hasUndecidedChatEditingResource && !chat.ctxHasRequestInProgress || chat.hasNotebookEditorModifications && editorFocus && hasUndecidedChatEditingResource && !chat.ctxHasRequestInProgress"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-chatEditor.action.accept",
+    "when": "chat.hasEditorModifications && editorFocus && hasUndecidedChatEditingResource && !chat.ctxHasRequestInProgress || chat.hasNotebookEditorModifications && editorFocus && hasUndecidedChatEditingResource && !chat.ctxHasRequestInProgress"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.chat.insertCodeBlock",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-workbench.action.chat.insertCodeBlock",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.chat.applyInEditor",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-workbench.action.chat.applyInEditor",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.chat.runInTerminal",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "-workbench.action.chat.runInTerminal",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat"
+  },
+  {
+    "key": "shift+enter",
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+  },
+  {
+    "key": "shift+enter",
+    "command": "inlineChat.acceptChanges",
+    "when": "inlineChatHasProvider && inlineChatVisible && !inlineChatDocumentChanged || inlineChatHasProvider && inlineChatVisible && config.inlineChat.mode != 'preview'"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-inlineChat.acceptChanges",
+    "when": "inlineChatHasProvider && inlineChatVisible && !inlineChatDocumentChanged || inlineChatHasProvider && inlineChatVisible && config.inlineChat.mode != 'preview'"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.chat.runCommand",
+    "when": "terminalChatResponseContainsCodeBlock && terminalHasBeenCreated && !terminalChatActiveRequest && !terminalChatResponseContainsMultipleCodeBlocks || terminalChatResponseContainsCodeBlock && terminalProcessSupported && !terminalChatActiveRequest && !terminalChatResponseContainsMultipleCodeBlocks"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-workbench.action.terminal.chat.runCommand",
+    "when": "terminalChatResponseContainsCodeBlock && terminalHasBeenCreated && !terminalChatActiveRequest && !terminalChatResponseContainsMultipleCodeBlocks || terminalChatResponseContainsCodeBlock && terminalProcessSupported && !terminalChatActiveRequest && !terminalChatResponseContainsMultipleCodeBlocks"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.chat.runFirstCommand",
+    "when": "terminalChatResponseContainsMultipleCodeBlocks && terminalHasBeenCreated && !terminalChatActiveRequest || terminalChatResponseContainsMultipleCodeBlocks && terminalProcessSupported && !terminalChatActiveRequest"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-workbench.action.terminal.chat.runFirstCommand",
+    "when": "terminalChatResponseContainsMultipleCodeBlocks && terminalHasBeenCreated && !terminalChatActiveRequest || terminalChatResponseContainsMultipleCodeBlocks && terminalProcessSupported && !terminalChatActiveRequest"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "composer.startComposerPrompt"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-composer.startComposerPrompt"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "editor.action.inlineDiffs.acceptPartialEdit",
+    "when": "editorHasPromptBar && editorPromptBarFocused"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-editor.action.inlineDiffs.acceptPartialEdit",
+    "when": "editorHasPromptBar && editorPromptBarFocused"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "aichat.newfollowupaction"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-aichat.newfollowupaction"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "ctrl+shift+;",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  }
+]

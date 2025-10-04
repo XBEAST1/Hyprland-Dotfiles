@@ -33,7 +33,7 @@ echo "vm.vfs_cache_pressure=50" | sudo tee -a /etc/sysctl.conf
 sudo cp .thunar/audiocovers.thumbnailer /usr/share/thumbnailers/
 
 # Remove Old Configurations
-rm -rf "$HOME/.config/fastfetch" "$HOME/.config/kitty" "$HOME/.config/waybar/config.ctl" "$HOME/.hyde.zshrc" "$HOME/.zshenv"
+rm -rf "$HOME/.config/fastfetch" "$HOME/.config/kitty/hyde.conf"
 sudo rm -f /etc/sddm.conf.d/kde_settings.conf /etc/sddm.conf.d/the_hyde_project.conf
 
 # Extract Cursors And Icons
@@ -43,7 +43,7 @@ for tar in .icons/*.tar.gz; do
 done
 
 # Copy New Configurations
-cp -r .config .local .hyde.zshrc .zshenv "$HOME/"
+cp -r .config .local "$HOME/"
 sudo cp -r .sddm/themes /usr/share/sddm
 sudo cp -f .sddm/themes/Electra/kde_settings.conf /etc/sddm.conf.d/the_hyde_project.conf
 
