@@ -43,6 +43,7 @@
       "pulseaudio#microphone",
       "custom/updates",
       "custom/keybindhint",
+      "custom/cpuprofile"
     ]
   },
   "group/pill#right2": {
