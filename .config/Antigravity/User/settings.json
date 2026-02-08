@@ -1,0 +1,108 @@
+{
+  "window.menuBarVisibility": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.enabled": false,
+  "terminal.external.linuxExec": "kitty",
+  "terminal.explorerKind": "both",
+  "terminal.sourceControlRepositoriesKind": "both",
+  "files.autoSave": "afterDelay",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "files.associations": {
+    "blade.php": "html",
+    "tpl": "html",
+    "php": "html"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.cursorBlinking": "expand",
+  "editor.fontFamily": "'Cascadia Code'",
+  "editor.fontLigatures": true,
+  "explorer.confirmDelete": false,
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "terminal.integrated.cursorStyle": "line",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "workbench.settings.applyToAllProfiles": [],
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "php": "html"
+  },
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "colorize.include": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.php",
+    "**/*.styl"
+  ],
+  "html-css-class-completion.HTMLLanguages": [
+    "php",
+    "html",
+    "vue",
+    "razor",
+    "blade",
+    "handlebars",
+    "twig",
+    "django-html",
+    "php",
+    "markdown",
+    "erb",
+    "ejs",
+    "svelte"
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmPasteNative": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "workbench.startupEditor": "none",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "window.newWindowProfile": "Default",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.linkedEditing": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.titleBarStyle": "native",
+  "vscord.status.idle.check": false,
+  "vscord.status.idle.enabled": false,
+  "editor.minimap.enabled": true,
+  "markdown-preview-enhanced.liveUpdate": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.ignoreRebaseWarning": true,
+  "git.allowForcePush": true,
+  "git.confirmForcePush": false,
+  "git.replaceTagsWhenPull": true,
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.activityBar.location": "top",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.colorCustomizations": {
+    "editorUnnecessaryCode.border": "#e5ff00"
+  },
+  "window.customTitleBarVisibility": "never",
+"terminal.integrated.stickyScroll.enabled": false,
+"antigravity.marketplaceExtensionGalleryServiceURL": "",
+"antigravity.marketplaceGalleryItemURL": "",
+"python.languageServer": "Default",
+}

@@ -1,0 +1,84 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+
+  // Ctrl i For Chat Open Or Close
+  {
+    "key": "ctrl+i",
+    "command": "antigravity.openAgent",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "antigravity.toggleChatFocus",
+    "when": "!terminalFocus"
+  },
+
+  // Remove Ctrl i For Inline Editor
+  {
+    "key": "ctrl+i",
+    "command": "-antigravity.prioritized.command.open",
+    "when": "editorTextFocus && !antigravity.isAgentModeInputBoxFocused"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-antigravity.prioritized.terminalCommand.open",
+    "when": "terminalFocus && !agentUiTerminalFocus"
+  },
+
+  // Ctrl Shift N For New Conversation
+  {
+    "key": "ctrl+shift+n",
+    "command": "antigravity.startNewConversation",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "antigravity.sendTerminalToSidePanel",
+    "when": "terminalFocus"
+  },
+
+
+  // Ctrl K For Inline Editor Toggle
+  {
+    "key": "ctrl+k",
+    "command": "antigravity.prioritized.command.open",
+    "when": "editorTextFocus && !antigravity.isAgentModeInputBoxFocused"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "antigravity.prioritized.command.close",
+    "when": "antigravity.isAgentModeInputBoxFocused"
+  },
+
+  // Ctrl K For Terminal Command Toggle
+  {
+    "key": "ctrl+k",
+    "command": "antigravity.prioritized.terminalCommand.open",
+    "when": "terminalFocus && !agentUiTerminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "antigravity.prioritized.terminalCommand.close",
+    "when": "agentUiTerminalFocus"
+  },
+]
