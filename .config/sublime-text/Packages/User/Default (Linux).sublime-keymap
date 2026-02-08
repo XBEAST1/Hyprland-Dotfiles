@@ -1,0 +1,12 @@
+[
+    { "keys": ["alt+shift+right"], "command": "expand_selection", "args": {"to": "smart"} },
+    { "keys": ["alt+up"], "command": "swap_line_up" },
+    { "keys": ["alt+down"], "command": "swap_line_down" },
+    { "keys": ["alt+shift+up"], "command": "duplicate_line" },
+    { "keys": ["alt+shift+down"], "command": "duplicate_line" },
+    { "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
+    { "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
+    { "keys": ["alt+z"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+    { "keys": ["ctrl+pageup"], "command": "prev_view" },
+    { "keys": ["ctrl+pagedown"], "command": "next_view" },
+]

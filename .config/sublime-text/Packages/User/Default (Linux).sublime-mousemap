@@ -1,0 +1,7 @@
+[
+    {
+        "button": "button1", "modifiers": ["alt"],
+        "press_command": "drag_select",
+        "press_args": { "additive": true }
+    }
+]

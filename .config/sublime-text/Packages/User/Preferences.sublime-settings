@@ -1,0 +1,8 @@
+{
+	"color_scheme": "Packages/Aura Theme Color Scheme/aura-theme.tmTheme",
+	"font_face": "Cascadia Code",
+	"font_size": 14,
+	"auto_complete": true,
+	"auto_complete_selector": "text",
+	"index_files": false,
+}
