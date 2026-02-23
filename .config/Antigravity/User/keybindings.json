@@ -24,13 +24,11 @@
   // Ctrl i For Chat Open Or Close
   {
     "key": "ctrl+i",
-    "command": "antigravity.openAgent",
-    "when": "!terminalFocus"
+    "command": "antigravity.openAgent"
   },
   {
     "key": "ctrl+i",
-    "command": "antigravity.toggleChatFocus",
-    "when": "!terminalFocus"
+    "command": "antigravity.toggleChatFocus"
   },
 
   // Remove Ctrl i For Inline Editor

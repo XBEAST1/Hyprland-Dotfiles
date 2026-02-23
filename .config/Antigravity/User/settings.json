@@ -13,12 +13,12 @@
   "workbench.iconTheme": "material-icon-theme",
   "liveServer.settings.donotShowInfoMsg": true,
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
   },
   "files.associations": {
     "blade.php": "html",
     "tpl": "html",
-    "php": "html"
+    "php": "html",
   },
   "liveServer.settings.donotVerifyTags": true,
   "editor.cursorBlinking": "expand",
@@ -26,11 +26,11 @@
   "editor.fontLigatures": true,
   "explorer.confirmDelete": false,
   "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "vscode.css-language-features",
   },
   "terminal.integrated.cursorStyle": "line",
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "git.openRepositoryInParentFolders": "never",
   "breadcrumbs.enabled": false,
@@ -38,9 +38,8 @@
   "workbench.settings.applyToAllProfiles": [],
   "emmet.includeLanguages": {
     "blade": "html",
-    "php": "html"
+    "php": "html",
   },
-  "python.defaultInterpreterPath": ".venv/bin/python",
   "python.terminal.activateEnvironment": true,
   "colorize.include": [
     "**/*.css",
@@ -48,7 +47,7 @@
     "**/*.sass",
     "**/*.less",
     "**/*.php",
-    "**/*.styl"
+    "**/*.styl",
   ],
   "html-css-class-completion.HTMLLanguages": [
     "php",
@@ -63,7 +62,7 @@
     "markdown",
     "erb",
     "ejs",
-    "svelte"
+    "svelte",
   ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "explorer.confirmPasteNative": false,
@@ -72,13 +71,13 @@
   "git.autofetch": true,
   "workbench.startupEditor": "none",
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "window.newWindowProfile": "Default",
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.linkedEditing": true,
   "explorer.confirmDragAndDrop": false,
@@ -98,11 +97,12 @@
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.colorCustomizations": {
-    "editorUnnecessaryCode.border": "#e5ff00"
+    "editorUnnecessaryCode.border": "#e5ff00",
   },
   "window.customTitleBarVisibility": "never",
-"terminal.integrated.stickyScroll.enabled": false,
-"antigravity.marketplaceExtensionGalleryServiceURL": "",
-"antigravity.marketplaceGalleryItemURL": "",
-"python.languageServer": "Default",
+  "terminal.integrated.stickyScroll.enabled": false,
+  "antigravity.marketplaceExtensionGalleryServiceURL": "",
+  "antigravity.marketplaceGalleryItemURL": "",
+  "python.languageServer": "Default",
+  "python.createEnvironment.trigger": "off",
 }
