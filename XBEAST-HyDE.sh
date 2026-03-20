@@ -137,7 +137,22 @@ sudo pacman -Sy chaotic-keyring chaotic-mirrorlist --noconfirm --needed
 echo "✓ Chaotic AUR configured"
 
 # ==============================================================================
-# 10. FINALIZATION
+# 10. DISABLE PERSISTENT LOGGING (RAM-ONLY LOGS)
+# ==============================================================================
+sudo mkdir -p /etc/systemd
+
+sudo sed -i '/^Storage=/d' /etc/systemd/journald.conf
+sudo sed -i '/^RuntimeMaxUse=/d' /etc/systemd/journald.conf
+
+echo "Storage=volatile" | sudo tee -a /etc/systemd/journald.conf
+echo "RuntimeMaxUse=50M" | sudo tee -a /etc/systemd/journald.conf
+
+sudo systemctl restart systemd-journald
+
+echo "✓ Logging set to RAM-only (no persistent logs)"
+
+# ==============================================================================
+# 11. FINALIZATION
 # ==============================================================================
 TOTAL_RAM_GB=$((TOTAL_RAM_MB / 1024))
 ZRAM_SIZE_GB=$((ZRAM_SIZE_MB / 1024))
