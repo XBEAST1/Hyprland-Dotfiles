@@ -11,6 +11,7 @@ $ICON_THEME = Gruvbox-Plus-Dark
 $CURSOR_THEME = Gruvbox
 $CURSOR_SIZE = 24
 $COLOR_SCHEME = prefer-dark
+$FONT = Noto Sans
 
 general {
     gaps_in = 3

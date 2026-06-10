@@ -5,6 +5,7 @@ $ICON_THEME = Tela-circle-dracula
 $CURSOR_THEME = Nero-Cyber-Cyan
 $CURSOR_SIZE = 30
 $COLOR_SCHEME = prefer-dark
+$FONT = Noto Sans
 
 general {
     gaps_in = 3
