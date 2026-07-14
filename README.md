@@ -7,6 +7,17 @@ cd Hyprland-Dotfiles
 sudo chmod +x XBEAST-HyDE.sh
 ./XBEAST-HyDE.sh
 ```
+
+## ⚠️ Maintenance Status
+
+This project is no longer maintained.
+
+I've moved to macOS and no longer use Hyprland or Arch Linux, so this repository has reached its final state.
+
+It's staying here as a reference for anyone who still finds it useful.
+
+---
+
 You Need <a href="https://github.com/HyDE-Project/HyDE">HyDE</a> For These Dotfiles To Work.
 <br>
 If You're Using Old Version of HyDE Use These <a href="https://github.com/XBEAST1/Hyprland-Dotfiles/tree/hyprdots">Hyprland Dotfiles</a>
